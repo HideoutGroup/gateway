@@ -8,8 +8,6 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.net.URI;
-
 /**
  * @author 董文强
  * @version 1.0
@@ -31,8 +29,7 @@ public class RouterConfig {
                 .route(p -> p
                         .path("/api/*").or().path("/api").or().path("/api/")
                         .filters(f -> f.rewritePath("/api", ""))
-                        .uri(URI.create("http://111.111.111.111"))
-                        .filter(filterFactory.apply()))
+                        .uri("http://111.111.111.111"))
                 .build();
     }
 

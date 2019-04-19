@@ -10,7 +10,6 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.Optional;
-import java.util.function.Function;
 
 import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.GATEWAY_REQUEST_URL_ATTR;
 import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.containsEncodedParts;
@@ -19,6 +18,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.c
 /**
  * @version 1.0
  * @date 2019年01月24日
+ * @author dongwenqiang
  */
 
 public class ChangeRequestUriGatewayFilterFactory extends AbstractChangeRequestUriGatewayFilterFactory<ChangeRequestUriGatewayFilterFactory.Config>  {
